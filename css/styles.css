@@ -1,1 +1,22 @@
 /* styles go here */
+/* start with the smallest size first (320px) - serve a scaled-down version of the background image for page loading speeds, and bandwidth */
+
+/* The original image is 4460px x 2973px and 950kb. we need to resize to 600px wide and compress to reduce the file size.  */
+
+header {
+    padding: 24px;
+    height: 400px;
+    background: #eff2f7 url(../img/bg-small.jpg) center center / cover no-repeat;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+/* As the screen gets wider, the background images stretches to fit and the lower sized image does look good on the screen. We can use nedia queries */
+@media only screen and (min-width: 950px){
+    header {
+        background-image: url(../img/bg-medium.jpg)
+    };
+}
