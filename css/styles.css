@@ -5,6 +5,7 @@
 
 header {
     padding: 24px;
+    margin-bottom: 24px;
     height: 400px;
     background: #eff2f7 url(../img/bg-small.jpg) center center / cover no-repeat;
 }
@@ -13,10 +14,52 @@ h1 {
     font-size: 40px;
     text-align: center;
 }
+aside, 
+section {
+    padding: 60px 0;
+    color:  #fff;
+    text-align: center;
+}
 
+aside:first-of-type {
+    background-color: #73a302;
+}
+
+section {
+    background-color: #334839;
+}
+
+aside {
+    background-color: #315002;
+}
 /* As the screen gets wider, the background images stretches to fit and the lower sized image does look good on the screen. We can use nedia queries */
 @media only screen and (min-width: 950px){
     header {
-        background-image: url(../img/bg-medium.jpg)
-    };
+        background: url(../img/bg-medium.jpg) center center / cover no-repeat;
+        height: 500px;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    aside {
+        width: 24%;
+    }
+    section {
+        width: 48%;
+    }
+}
+
+@media only screen and (min-width: 1500px){
+    header {
+        background: url(../img/bg-large.jpg) center center / cover no-repeat;
+        height: 600px;
+    }
+
+    .inner-container {
+        width: 1400px;
+        margin: 0 auto;
+    }
 }
